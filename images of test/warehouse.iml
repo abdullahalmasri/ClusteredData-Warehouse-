@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "9361e5c8-3016-4a89-bb44-0efab31bc65b",
+		"name": "ProgressSoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post Deal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"fileName\": \"me\",\n        \"dealId\": \"6464e5b9-b545-48a1-84be-46c8f7fd3d31\",\n        \"fromCurrency\": \"CNY\",\n        \"toCurrency\": \"UZS\",\n        \"dateTime\": \"2017-11-02 10:50\",\n        \"amount\": \"0.00\",\n        \"accpet\": true\n    },\n    {\n        \"fileName\": \"me\",\n        \"dealId\": \"c4186668-8213-46e3-bd95-59443b7cc85b\",\n        \"fromCurrency\": \"UYU\",\n        \"toCurrency\": \"SRD\",\n        \"dateTime\": \"2017-11-02 10:50\",\n        \"amount\": \"1.00\",\n        \"accpet\": true\n    },\n    {\n        \"fileName\": \"me\",\n        \"dealId\": \"5db1c7bd-4799-4e25-a41a-55120d81bfde\",\n        \"fromCurrency\": \"CUP\",\n        \"toCurrency\": \"UZS\",\n        \"dateTime\": \"2017-11-02 10:50\",\n        \"amount\": \"3.00\",\n        \"accpet\": true\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8585/api/v1/saveDeal",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"api",
+						"v1",
+						"saveDeal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Deal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8585/api/v1/findDeals",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"api",
+						"v1",
+						"findDeals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8585/api/v1/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"api",
+						"v1",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\": \"admin\",\n    \"userName\": \"admin\",\n    \"password\": \"123456\",\n    \"validDeal\": [\n        {\n        \"id\": \"d1ad16a9-d089-46f3-b7ae-9ac59994c9d1\",\n        \"fileName\": \"me\",\n        \"dealId\": \"6464e5b9-b545-48a1-84be-46c8f7fd3d31\",\n        \"fromCurrency\": \"CNY\",\n        \"toCurrency\": \"UZS\",\n        \"dateTime\": \"2017-11-02 10:50\",\n        \"amount\": 0.00,\n        \"accpet\": true\n    }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8585/api/v1/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"api",
+						"v1",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post csv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/abdullah-al-masri/warehouse/deals.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8585/api/v1/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "8585",
+					"path": [
+						"api",
+						"v1",
+						"upload"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post csv",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/abdullah-al-masri/warehouse/deals.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8585/api/v1/upload",
+							"host": [
+								"localhost"
+							],
+							"port": "8585",
+							"path": [
+								"api",
+								"v1",
+								"upload"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Mar 2022 18:17:48 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Uploaded the file successfully: deals.csv\"\n}"
+				}
+			]
+		}
+	]
+}
