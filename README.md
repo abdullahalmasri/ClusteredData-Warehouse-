@@ -53,7 +53,7 @@ open terminal
 the ui will be open in localhost:4200
 
 
-### 2.java
+### 3.java
 
 here you need to be sure you downloaded java 8 i use intellij 
 so i check it either with command line or intellij 
